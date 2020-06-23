@@ -1,0 +1,400 @@
+{
+    "List" : {
+        "prefix": "newlist",
+        "body": [
+            "List<${1:Object}> ${2:listName} = new List<${1:Object}>();"
+        ],
+        "description": "Apex List declaration"
+    },
+
+    "Set" : {
+        "prefix": "newset",
+        "body": [
+            "Set<${1:Object}> ${2:setName} = new Set<${1:Object}>();"
+        ],
+        "description": "Apex Set declaration"
+    },
+
+    "Map" : {
+        "prefix": "newmap",
+        "body": [
+            "Map<${1:String}, ${2:Object}> ${3:mapName} = new Map<${1:String}, ${2:Object}>();"
+        ],
+        "description": "Apex Map declaration"
+    },
+
+    "If" : {
+        "prefix": "if",
+        "body": [
+            "if (${1:condition}) {",
+            "\t$2",
+            "}"
+        ],
+        "description": "if"
+    },
+
+    "If-Else" : {
+        "prefix": "ifelse",
+        "body": [
+            "if (${1:condition}) {",
+            "\t$2",
+            "}",
+            "else {",
+            "\t$3",
+            "}"
+        ],
+        "description": "If else"
+    },
+
+    "Switch statement" : {
+        "prefix": "switch",
+        "body": [
+            "switch on ${1:expression} {",
+                "\twhen ${2:value} {",
+                    "\t$3",
+                "\t}",
+                "\twhen ${4:value} {",
+                    "\t$5",
+                "\t}",
+                "\twhen else {",
+                    "\t$6",
+                "\t}",
+            "}"
+        ],
+        "description": "Switch case"
+    },
+
+    "Traditional for loop" : {
+        "prefix": "fort",
+        "body": [
+            "for (Integer ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++) {",
+            "\t$3",
+            "}"
+        ],
+        "description": "Traditional for loop"
+    },
+
+    "Advanced for loop" : {
+        "prefix": "fora",
+        "body": [
+            "for (${1:type} ${2:variable} : ${3:collection}) {",
+            "\t$4",
+            "}"
+        ],
+        "description": "Advanced for loop"
+    },
+
+    "SOQL for loop" : {
+        "prefix": "forsoql",
+        "body": [
+            "for (${1:sobjectName} ${2:sobjectVar} : [SELECT ${3:fieldNames} FROM ${1:sobjectName}]) {",
+            "\t$5",
+            "}"
+        ],
+        "description": "SOQL for loop"
+    },
+
+    "While" : {
+        "prefix": "while",
+        "body": [
+            "while (${1:condition}) {",
+            "\t$2",
+            "}"
+        ],
+        "description": "While loop"
+    },
+
+    "Do While" : {
+        "prefix": "dowhile",
+        "body": [
+            "do {",
+            "\t$2",
+            "} while (${1:condition});"
+        ],
+        "description": "Do while loop"
+    },
+
+    "System debug without variable": {
+        "prefix": "debug",
+        "body": [
+            "System.debug('$1');"
+        ],
+        "description": "Print debug to log without any variable"
+    },
+
+    "System debug with variable": {
+        "prefix": "debugvar",
+        "body": [
+            "System.debug('$1' + ${2:variable});"
+        ],
+        "description": "Print debug to log with a variable value"
+    },
+
+    "Test method" : {
+        "prefix": "testmethod",
+        "body": [
+            "@isTest",
+            "private static void test${1:TestCase}() {",
+                "\t//Test data setup\n",
+                "\t//Actual test",
+                "\tSystem.startTest();",
+                "\tSystem.stopTest();",
+                "\t//Asserts",
+            "}"
+        ],
+        "description": "Test method"
+    },
+
+    "Assert" : {
+        "prefix": "assert",
+        "body": [
+            "System.assert(${1:booleanExpression});"
+        ],
+        "description": "Assert for single boolean expression"
+    },
+
+    "Assert Equals" : {
+        "prefix": "asserte",
+        "body": [
+            "System.assertEquals(${1:expectedValue, ${2:actualValue});"
+        ],
+        "description": "Assert for comparing two values"
+    },
+
+    "Assert Not Equals" : {
+        "prefix": "assertne",
+        "body": [
+            "System.assertNotEquals(${1:expectedValue, ${2:actualValue});"
+        ],
+        "description": "Assert for comparing two values negative"
+    },
+
+    "AuraEnabled method": {
+        "prefix": "auramethod",
+        "body": [
+            "@AuraEnabled",
+            "${1:public} static ${2:void} ${3:methodName}() {",
+            "\t$4",
+            "}"
+        ],
+        "description": "Aura Enabled method"
+    },
+
+    "AuraHandledException" : {
+        "prefix": "auraHandledException",
+        "body": [
+            "throw new AuraHandledException(${1:exceptionMessage});"
+        ],
+        "description": "Throw the AuraHandledException which can be handled by Aura"
+    },
+
+    "Future method" : {
+        "prefix": "futuremethod",
+        "body": [
+            "@future",
+            "public static void ${1:methodName}() {",
+            "\t$2",
+            "}"
+        ],
+        "description": "Future method"
+    },
+
+    "InvocableMethod" : {
+        "prefix": "invocablemethod",
+        "body": [
+            "@InvocableMethod(label='${1:label}' description='${2:description}')",
+            "public static ${3:void} ${4:methodName}(${5:List<Id> ids}) {",
+            "\t$6",
+            "}"
+        ],
+        "description": "Invocable method to be called from Process/Flow"
+    },
+
+    "RemoteAction" : {
+        "prefix": "remoteaction",
+        "body": [
+            "@RemoteAction",
+            "public static ${1:void} ${2:methodName}() {",
+            "\t$6",
+            "}"
+        ],
+        "description": "Remote action method to be called from Visualforce page"
+    },
+
+    "Test Setup" : {
+        "prefix": "testsetup",
+        "body": [
+            "@testSetup",
+            "private static void ${1:testSetup}() {",
+            "\t$2",
+            "}"
+        ],
+        "description": "Test Setup method"
+    },
+
+    "Batch class" : {
+        "prefix": "batchclass",
+        "body": [
+            "public class ${1:className} implements Database.Batchable<sObject> {\n",
+            "\tpublic ${1:className}() {",
+            "\t}\n",
+            "\tpublic Database.QueryLocator start(Database.BatchableContext BC) {",
+            "\t}\n",
+            "\tpublic void execute(Database.BatchableContext BC, List<sObject> scope) {",
+            "\t}\n",
+            "\tpublic void finish(Database.BatchableContext BC) {",
+            "\t}\n",
+            "}"
+        ],
+        "description": "Batch class"
+    },
+
+    "Schedulable class" : {
+        "prefix": "schedulableclass",
+        "body": [
+            "public class ${1:className} implements Schedulable {\n",
+            "\tpublic void execute(SchedulableContext SC) {",
+            "\t}\n",
+            "}"
+        ],
+        "description": "Schedulable class"
+    },
+
+    "Test class" : {
+        "prefix": "testclass",
+        "body": [
+            "@isTest",
+            "private class ${1:className} {\n",
+                "\t@isTest",
+                "\tprivate static void test${2:TestCase}() {",
+                    "\t\t// Test data setup\n",
+                    "\t\t// Actual test",
+                    "\t\tSystem.startTest();\n",
+                    "\t\tSystem.stopTest();\n",
+                    "\t\t// Asserts",
+                "\t}\n",
+            "}"
+        ],
+        "description": "Test class"
+    },
+
+    "Custom Exception" : {
+        "prefix": "customexception",
+        "body": [
+            "public class ${1:exceptionName}Exception extends Exception {",
+            "}"
+        ],
+        "description": "Custom Exception class"
+    },
+
+    "try-catch" : {
+        "prefix": "tryc",
+        "body": [
+            "try {",
+            "\t",
+            "}",
+            "catch (Exception ex) {",
+            "\t",
+            "}"
+        ],
+        "description": "Try Catch"
+    },
+
+    "try-catch-finally" : {
+        "prefix": "tryc",
+        "body": [
+            "try {",
+            "\t",
+            "}",
+            "catch (Exception ex) {",
+            "\t",
+            "}",
+            "finally {",
+            "\t",
+            "}"
+        ],
+        "description": "Try Catch Finally"
+    },
+
+    "SOQL" : {
+        "prefix": "soql",
+        "body": [
+            "[SELECT ${1:field1, field2} FROM ${2:SobjectName} WHERE ${3:clause}];"
+        ],
+        "description": "Apex SOQL query"
+    },
+
+    "Database Query" : {
+        "prefix": "dbquery",
+        "body": [
+            "List<${1:sObject}> sobjects = Database.query(${2:queryString});"
+        ],
+        "description": "Database.query for dynamic queries"
+    },
+
+    "Database Insert Single" : {
+        "prefix": "dbinserts",
+        "body": [
+            "Database.SaveResult insertResult = Database.insert(${1:recordToInsert});"],
+        "description": "Database.insert single record"
+    },
+
+    "Database Insert Multiple" : {
+        "prefix": "dbinsertm",
+        "body": [
+            "Database.SaveResult[] insertResults = Database.insert(${1:recordsToInsert});"],
+        "description": "Database.insert multiple records"
+    },
+
+    "Database Update Single" : {
+        "prefix": "dbupdates",
+        "body": [
+            "Database.SaveResult updateResult = Database.update(${1:recordToUpdate});"],
+        "description": "Database.update single record"
+    },
+
+    "Database Update Multiple" : {
+        "prefix": "dbupdatem",
+        "body": [
+            "Database.SaveResult[] updateResults = Database.update(${1:recordsToUpdate});"],
+        "description": "Database.update multiple records"
+    },
+
+    "Database Delete Single" : {
+        "prefix": "dbdeletes",
+        "body": [
+            "Database.DeleteResult deleteResult = Database.delete(${1:recordToDelete});"],
+        "description": "Database.delete single record"
+    },
+
+    "Database Delete Multiple" : {
+        "prefix": "dbdeletem",
+        "body": [
+            "Database.DeleteResult[] deleteResults = Database.delete(${1:recordsToDelete});"],
+        "description": "Database.delete multiple records"
+    },
+
+    "Add Savepoint" : {
+        "prefix": "savepoint",
+        "body": [
+            "System.Savepoint ${1:savepoint} = Database.setSavepoint();"
+        ],
+        "description": "Create Savepoint"
+    },
+
+    "Rollback" : {
+        "prefix": "rollback",
+        "body": [
+            "Database.rollback(${1:savepoint});"
+        ],
+        "description": "Rollback"
+    },
+
+    "Ternary expression" : {
+        "prefix": "ternary",
+        "body": [
+            "${1:condition} ? ${2:exprIfTrue} : ${3:exprIfFalse}"
+        ],
+        "description": "Ternary expression"
+    }
+}

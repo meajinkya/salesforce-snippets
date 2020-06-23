@@ -1,0 +1,110 @@
+{
+    "Aura Attribute" : {
+        "prefix": "attr",
+        "body": [
+            "<aura:attribute name=\"${1:name}\" type=\"${2:type}\" />"
+        ],
+        "description": "Aura component attribute"
+    },
+
+    "Aura Method" : {
+        "prefix": "aura-method",
+        "body": [
+            "<aura:method name=\"${1:name}\" action=\"{!c.${2:functionName}}\" />"
+        ],
+        "description": "Aura method"
+    },
+
+    "Aura Method With Params" : {
+        "prefix": "aura-method-params",
+        "body": [
+            "<aura:method name=\"${1:name}\" action=\"{!c.${2:functionName}}\">",
+                "\t<aura:attribute name=\"${3:attributeName}\" type=\"${4:type}\" />",
+            "</aura:method>"
+        ],
+        "description": "Aura method with parameters"
+    },
+
+    "Init Handler" : {
+        "prefix": "init-handler",
+        "body": [
+            "<aura:handler name=\"init\" value=\"{!this}\" action=\"{!c.${1:functionName}}\" />"
+        ],
+        "description": "Init Handler"
+    },
+
+    "Component Event Handler" : {
+        "prefix": "compevent-handler",
+        "body": [
+            "<aura:handler name=\"${1:name}\" event=\"c:${2:eventName}\" action=\"{!c.${3:functionName}}\" />"
+        ],
+        "description": "Component event handler"
+    },
+
+    "Application Event Handler" : {
+        "prefix": "appevent-handler",
+        "body": [
+            "<aura:handler event=\"c:${1:eventName}\" action=\"{!c.${2:functionName}}\" />"
+        ],
+        "description": "Application event handler"
+    },
+
+    "Component Event Register" : {
+        "prefix": "cevent-reg",
+        "body": [
+            "<aura:registerEvent name=\"${1:name}\" type=\"c:${2:eventName}\" />"
+        ],
+        "description": "Component event registration"
+    },
+
+    "Aura If" : {
+        "prefix": "if",
+        "body": [
+            "<aura:if isTrue=\"${1:condition}\">",
+                "\t$2",
+            "</aura:if>"
+        ],
+        "description": "Aura if"
+    },
+
+    "Aura If-Else" : {
+        "prefix": "ifelse",
+        "body": [
+            "<aura:if isTrue=\"${1:condition}\">",
+                "\t$2",
+                "\t<aura:set attribute=\"else\">",
+                    "\t\t$3",
+                "\t</aura:set>",
+            "</aura:if>"
+        ],
+        "description": "Aura if-else"
+    },
+
+    "Aura Iteration" : {
+        "prefix": "iteration",
+        "body": [
+            "<aura:iteration items=\"{!v.${1:items}}\" var=\"${2:itemVar}\">",
+                "\t$3",
+            "</aura:iteration>"
+        ],
+        "description": "Aura iteration"
+    },
+
+    "Aura Set" : {
+        "prefix": "aura-set",
+        "body": [
+            "<aura:set attribute=\"${1:attributeName}\">",
+                "\t$2",
+            "</aura:set>"
+        ],
+        "description": "Set attribute"
+    },
+
+    "Label Reference" : {
+        "prefix": "label-ref",
+        "body": [
+            "\\$Label.c.${1:labelName}"
+        ],
+        "description": "Reference a custom label"
+    }
+}

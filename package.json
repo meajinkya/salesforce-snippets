@@ -1,0 +1,44 @@
+{
+    "name": "salesforce-snippets",
+    "displayName": "Salesforce Snippets",
+    "description": "Useful Salesforce snippets to speed up writing code for Salesforce platform",
+    "version": "1.0.0",
+    "publisher": "ajinkya-hingne",
+    "engines": {
+        "vscode": "^1.31.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "keywords": [
+        "snippets",
+        "salesforce",
+        "apex",
+        "lwc",
+        "lightning components"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "apex",
+                "path": "./snippets/apex-snippets.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/html-snippets.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets/javascript-snippets.json"
+            }
+        ]
+    },
+    "icon": "images/icon.png",
+    "homepage": "https://github.com/meajinkya/vscode-wordcount/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/meajinkya/salesforce-snippets.git"
+    },
+    "license": "SEE LICENSE IN LICENSE.txt"
+}
