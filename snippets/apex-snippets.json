@@ -396,5 +396,18 @@
             "${1:condition} ? ${2:exprIfTrue} : ${3:exprIfFalse}"
         ],
         "description": "Ternary expression"
+    },
+
+    "HTTP request" : {
+        "prefix": "http-request",
+        "body": [
+            "Http httpObject = new Http();",
+            "HttpRequest request = new HttpRequest();",
+            "request.setEndpoint('${1:url}');",
+            "request.setMethod('${2:httpMethod}');",
+            "HttpResponse response = httpObject.send(request);",
+            "String responseBody = response.getBody();"
+        ],
+        "description": "Basic HTTP request"
     }
 }

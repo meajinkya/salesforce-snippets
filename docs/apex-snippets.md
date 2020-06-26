@@ -1,4 +1,4 @@
-# Apex Snippets Reference
+## Apex Snippets Reference
 
 Following tables contains a list of the available snippets and the prefixes for them.
 
@@ -88,4 +88,5 @@ Following tables contains a list of the available snippets and the prefixes for 
 ### Other
 |Snippet Name|Snippet Prefix|
 |------------|--------------|
+|HTTP request|http-request|
 |Ternary expression|ternary|

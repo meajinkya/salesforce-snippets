@@ -1,8 +1,8 @@
-# JavaScript Snippets Reference
+## JavaScript Snippets Reference
 
 Following tables contains a list of the available snippets and the prefixes for them.
 
-## Aura Component JS
+### Aura Component JS
 |Snippet Name|Snippet Prefix|
 |------------|--------------|
 |Function|aura-func|

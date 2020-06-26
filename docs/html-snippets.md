@@ -1,8 +1,8 @@
-# HTML Snippets Reference
+## HTML Snippets Reference
 
 Following tables contains a list of the available snippets and the prefixes for them.
 
-## Aura Component
+### Aura Component
 |Snippet Name|Snippet Prefix|
 |------------|--------------|
 |Aura Attribute|attr|
