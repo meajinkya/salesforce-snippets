@@ -156,7 +156,7 @@
     "Assert Equals" : {
         "prefix": "asserte",
         "body": [
-            "System.assertEquals(${1:expectedValue, ${2:actualValue});"
+            "System.assertEquals(${1:expectedValue}, ${2:actualValue});"
         ],
         "description": "Assert for comparing two values"
     },
@@ -164,7 +164,7 @@
     "Assert Not Equals" : {
         "prefix": "assertne",
         "body": [
-            "System.assertNotEquals(${1:expectedValue, ${2:actualValue});"
+            "System.assertNotEquals(${1:expectedValue}, ${2:actualValue});"
         ],
         "description": "Assert for comparing two values negative"
     },
