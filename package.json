@@ -2,7 +2,7 @@
     "name": "salesforce-snippets",
     "displayName": "Salesforce Snippets",
     "description": "Useful Salesforce snippets to speed up writing code for Salesforce platform",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "publisher": "ajinkya-hingne",
     "engines": {
         "vscode": "^1.31.0"

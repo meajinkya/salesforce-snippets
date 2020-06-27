@@ -1,9 +1,13 @@
 ## Changelog
 All notable changes to this project will be documented in this file.
 
+### [1.1.1] - 2020-06-27
+#### Fixed
+- Incorrect placeholders in Assert Equals and Assert Not Equals snippets
+
 ### [1.1.0] - 2020-06-26
 #### Added
-- Snippet for HTTP request 
+- Snippet for HTTP request
 
 ### [1.0.0] - 2020-06-23
 #### Added
@@ -12,3 +16,4 @@ All notable changes to this project will be documented in this file.
 
 [1.0.0]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.0.0
 [1.1.0]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.1.0
+[1.1.1]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.1.1
