@@ -1,8 +1,8 @@
 {
     "Aura Attribute" : {
-        "prefix": "attr",
+        "prefix": "aura-attr",
         "body": [
-            "<aura:attribute name=\"${1:name}\" type=\"${2:type}\" />"
+            "<aura:attribute name=\"${1:name}\" type=\"${2:type}\" access=\"${3|public,private,global|}\" />"
         ],
         "description": "Aura component attribute"
     },
@@ -26,7 +26,7 @@
     },
 
     "Init Handler" : {
-        "prefix": "init-handler",
+        "prefix": "aura-init-handler",
         "body": [
             "<aura:handler name=\"init\" value=\"{!this}\" action=\"{!c.${1:functionName}}\" />"
         ],
@@ -34,7 +34,7 @@
     },
 
     "Component Event Handler" : {
-        "prefix": "compevent-handler",
+        "prefix": "aura-compevent-handler",
         "body": [
             "<aura:handler name=\"${1:name}\" event=\"c:${2:eventName}\" action=\"{!c.${3:functionName}}\" />"
         ],
@@ -42,7 +42,7 @@
     },
 
     "Application Event Handler" : {
-        "prefix": "appevent-handler",
+        "prefix": "aura-appevent-handler",
         "body": [
             "<aura:handler event=\"c:${1:eventName}\" action=\"{!c.${2:functionName}}\" />"
         ],
@@ -50,7 +50,7 @@
     },
 
     "Component Event Register" : {
-        "prefix": "cevent-reg",
+        "prefix": "aura-compevent-reg",
         "body": [
             "<aura:registerEvent name=\"${1:name}\" type=\"c:${2:eventName}\" />"
         ],
@@ -58,7 +58,7 @@
     },
 
     "Aura If" : {
-        "prefix": "if",
+        "prefix": "aura-if",
         "body": [
             "<aura:if isTrue=\"${1:condition}\">",
                 "\t$2",
@@ -68,7 +68,7 @@
     },
 
     "Aura If-Else" : {
-        "prefix": "ifelse",
+        "prefix": "aura-ifelse",
         "body": [
             "<aura:if isTrue=\"${1:condition}\">",
                 "\t$2",
@@ -81,7 +81,7 @@
     },
 
     "Aura Iteration" : {
-        "prefix": "iteration",
+        "prefix": "aura-iteration",
         "body": [
             "<aura:iteration items=\"{!v.${1:items}}\" var=\"${2:itemVar}\">",
                 "\t$3",
@@ -101,7 +101,7 @@
     },
 
     "Label Reference" : {
-        "prefix": "label-ref",
+        "prefix": "aura-label-ref",
         "body": [
             "\\$Label.c.${1:labelName}"
         ],

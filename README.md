@@ -6,10 +6,11 @@ A [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=ajinky
 ### Features
 This extension will give developers a lot of Salesforce code snippets which can be easily used while writing code in Apex and Aura Components to write code faster.  
 
-[![Apex Count](https://img.shields.io/badge/Apex-41-red?style=flat-square)](https://github.com/meajinkya/salesforce-snippets/blob/master/docs/apex-snippets.md#apex-snippets-reference) 
+##### Available Snippets
+[![Apex](https://img.shields.io/badge/Apex-41-red?style=flat-square)](https://github.com/meajinkya/salesforce-snippets/blob/master/docs/apex-snippets.md#apex-snippets-reference) 
 [![Aura Markup](https://img.shields.io/badge/Aura_Markup-12-green?style=flat-square)](https://github.com/meajinkya/salesforce-snippets/blob/master/docs/html-snippets.md#aura-component) 
-[![Aura JavaScript](https://img.shields.io/badge/Aura_JavaScript-06-blue?style=flat-square)](https://github.com/meajinkya/salesforce-snippets/blob/master/docs/javascript-snippets.md#aura-component-js)  
-
+[![Aura JavaScript](https://img.shields.io/badge/Aura_JavaScript-06-blue?style=flat-square)](https://github.com/meajinkya/salesforce-snippets/blob/master/docs/javascript-snippets.md#aura-component-js) 
+![LWC](https://img.shields.io/badge/LWC-Coming_Soon-lightgrey?style=flat-square)  
 *Tip: Click on above badges to open the list of respective language snippets and their prefixes.*
 
 #### Few commonly used Salesforce snippets
@@ -20,9 +21,9 @@ This extension will give developers a lot of Salesforce code snippets which can 
 |Advanced for loop|fora|Apex
 |System debug without variable|debug|Apex
 |Test method|testmethod|Apex
-|Init Handler|init-handler|Aura Markup
-|Aura Iteration|iteration|Aura Markup
-|Call Apex Action|call-apex-action|Aura JavaScript
+|Init Handler|aura-init-handler|Aura Markup
+|Aura Iteration|aura-iteration|Aura Markup
+|Call Apex Action|aura-call-apex-action|Aura JavaScript
 
 But those are not all the snippets! To explore all the other snippets available in the extension, go to the [docs](https://github.com/meajinkya/salesforce-snippets/tree/master/docs) folder.  
 The [features](#features) sections has direct links to language wise snippet reference.

@@ -173,7 +173,7 @@
         "prefix": "auramethod",
         "body": [
             "@AuraEnabled",
-            "${1:public} static ${2:void} ${3:methodName}() {",
+            "${1|public,global|} static ${2:void} ${3:methodName}() {",
             "\t$4",
             "}"
         ],
@@ -293,7 +293,7 @@
             "try {",
             "\t",
             "}",
-            "catch (Exception ex) {",
+            "catch (${1|Exception,AsyncException,CalloutException,DmlException,NullPointerException,QueryException|} ex) {",
             "\t",
             "}"
         ],
@@ -306,7 +306,7 @@
             "try {",
             "\t",
             "}",
-            "catch (Exception ex) {",
+            "catch (${1|Exception,AsyncException,CalloutException,DmlException,NullPointerException,QueryException|} ex) {",
             "\t",
             "}",
             "finally {",
@@ -404,7 +404,7 @@
             "Http httpObject = new Http();",
             "HttpRequest request = new HttpRequest();",
             "request.setEndpoint('${1:url}');",
-            "request.setMethod('${2:httpMethod}');",
+            "request.setMethod('${2|GET,POST,PUT,PATCH,DELETE,TRACE|}');",
             "HttpResponse response = httpObject.send(request);",
             "String responseBody = response.getBody();"
         ],

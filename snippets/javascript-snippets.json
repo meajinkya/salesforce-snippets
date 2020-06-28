@@ -10,7 +10,7 @@
     },
 
     "Call Apex Action" : {
-        "prefix": "call-apex-action",
+        "prefix": "aura-call-apex-action",
         "body": [
             "var ${1:actionName} = component.get(\"c.${2:methodName}\");",
             "${1:actionName}.setParams({",
@@ -31,7 +31,7 @@
     },
 
     "Fire Component Event" : {
-        "prefix": "fire-compevent",
+        "prefix": "aura-fire-compevent",
         "body": [
             "var compEvent = component.get(\"${1:componentEventName}\");",
             "compEvent.setParams({",
@@ -43,7 +43,7 @@
     },
 
     "Fire Application Event" : {
-        "prefix": "fire-appevent",
+        "prefix": "aura-fire-appevent",
         "body": [
             "var appEvent = \\$A.get(\"e.c:${1:appEventName}\");",
             "appEvent.setParams({",
@@ -55,12 +55,12 @@
     },
 
     "Toast" : {
-        "prefix": "toast-event",
+        "prefix": "aura-toast-event",
         "body": [
             "var toastEvent = \\$A.get(\"e.force:showToast\");",
             "toastEvent.setParams({",
                 "\t\"title\": ${1:title},",
-                "\t\"type\": ${2:type},",
+                "\t\"type\": \"${2|error,warning,success,info|}\",",
                 "\t\"message\": ${3:message}",
             "});",
             "toastEvent.fire();"
@@ -69,7 +69,7 @@
     },
 
     "Label Reference" : {
-        "prefix": "label-ref",
+        "prefix": "aura-label-ref",
         "body": [
             "\\$A.get(\"\\$Label.c.${1:labelName}\");"
         ],

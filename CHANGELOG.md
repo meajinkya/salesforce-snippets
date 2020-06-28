@@ -1,6 +1,12 @@
 ## Changelog
 All notable changes to this project will be documented in this file.
 
+### [1.2.0] - 2020-06-28
+#### Changed
+- Aura related trigger text to have "aura" prefix 
+#### Added
+- Placeholder choices wherever applicable
+
 ### [1.1.1] - 2020-06-27
 #### Fixed
 - Incorrect placeholders in Assert Equals and Assert Not Equals snippets
@@ -17,3 +23,4 @@ All notable changes to this project will be documented in this file.
 [1.0.0]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.0.0
 [1.1.0]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.1.0
 [1.1.1]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.1.1
+[1.2.0]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.2.0
