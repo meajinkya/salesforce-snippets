@@ -88,7 +88,7 @@
         "prefix": "forsoql",
         "body": [
             "for (${1:sobjectName} ${2:sobjectVar} : [SELECT ${3:fieldNames} FROM ${1:sobjectName}]) {",
-            "\t$5",
+            "\t$4",
             "}"
         ],
         "description": "SOQL for loop"
@@ -135,11 +135,11 @@
         "body": [
             "@isTest",
             "private static void test${1:TestCase}() {",
-                "\t//Test data setup\n",
-                "\t//Actual test",
-                "\tSystem.startTest();",
-                "\tSystem.stopTest();",
-                "\t//Asserts",
+                "\t// Test data setup\n",
+                "\t// Actual test",
+                "\tTest.startTest();\n",
+                "\tTest.stopTest();\n",
+                "\t// Asserts",
             "}"
         ],
         "description": "Test method"
@@ -269,8 +269,8 @@
                 "\tprivate static void test${2:TestCase}() {",
                     "\t\t// Test data setup\n",
                     "\t\t// Actual test",
-                    "\t\tSystem.startTest();\n",
-                    "\t\tSystem.stopTest();\n",
+                    "\t\tTest.startTest();\n",
+                    "\t\tTest.stopTest();\n",
                     "\t\t// Asserts",
                 "\t}\n",
             "}"
@@ -327,7 +327,7 @@
     "Database Query" : {
         "prefix": "dbquery",
         "body": [
-            "List<${1:sObject}> sobjects = Database.query(${2:queryString});"
+            "List<${1:sObject}> ${2:sobjects} = Database.query(${3:queryString});"
         ],
         "description": "Database.query for dynamic queries"
     },
@@ -335,42 +335,48 @@
     "Database Insert Single" : {
         "prefix": "dbinserts",
         "body": [
-            "Database.SaveResult insertResult = Database.insert(${1:recordToInsert});"],
+            "Database.SaveResult insertResult = Database.insert(${1:recordToInsert});"
+        ],
         "description": "Database.insert single record"
     },
 
     "Database Insert Multiple" : {
         "prefix": "dbinsertm",
         "body": [
-            "Database.SaveResult[] insertResults = Database.insert(${1:recordsToInsert});"],
+            "Database.SaveResult[] insertResults = Database.insert(${1:recordsToInsert});"
+        ],
         "description": "Database.insert multiple records"
     },
 
     "Database Update Single" : {
         "prefix": "dbupdates",
         "body": [
-            "Database.SaveResult updateResult = Database.update(${1:recordToUpdate});"],
+            "Database.SaveResult updateResult = Database.update(${1:recordToUpdate});"
+        ],
         "description": "Database.update single record"
     },
 
     "Database Update Multiple" : {
         "prefix": "dbupdatem",
         "body": [
-            "Database.SaveResult[] updateResults = Database.update(${1:recordsToUpdate});"],
+            "Database.SaveResult[] updateResults = Database.update(${1:recordsToUpdate});"
+        ],
         "description": "Database.update multiple records"
     },
 
     "Database Delete Single" : {
         "prefix": "dbdeletes",
         "body": [
-            "Database.DeleteResult deleteResult = Database.delete(${1:recordToDelete});"],
+            "Database.DeleteResult deleteResult = Database.delete(${1:recordToDelete});"
+        ],
         "description": "Database.delete single record"
     },
 
     "Database Delete Multiple" : {
         "prefix": "dbdeletem",
         "body": [
-            "Database.DeleteResult[] deleteResults = Database.delete(${1:recordsToDelete});"],
+            "Database.DeleteResult[] deleteResults = Database.delete(${1:recordsToDelete});"
+        ],
         "description": "Database.delete multiple records"
     },
 

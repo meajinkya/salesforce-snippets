@@ -26,7 +26,7 @@ This extension will give developers a lot of Salesforce code snippets which can 
 |Call Apex Action|aura-call-apex-action|Aura JavaScript
 
 But those are not all the snippets! To explore all the other snippets available in the extension, go to the [docs](https://github.com/meajinkya/salesforce-snippets/tree/master/docs) folder.  
-The [features](#features) sections has direct links to language wise snippet reference.
+The [Available Snippets](#available-snippets) section has direct links to language wise snippet reference.
 
 #### How to use?
 - After [installing the extension](#installation) in VS Code, the snippets will start appearing automatically when a file with appropriate language is opened.
@@ -47,9 +47,7 @@ Extension installation is as easy as clicking a button from Extensions window in
 2. Search for *Salesforce Snippets*
 3. Click Install
 
-### Release Notes
-
-#### 1.0.0
-This release includes snippets for Apex, Aura Component HTML and Aura Component JavaScript.
-
 ---
+
+If you see any issue(s) or have any enhancement request(s), feel free to [create an issue](https://github.com/meajinkya/salesforce-snippets/issues) on GitHub.
+### Happy coding! ❤

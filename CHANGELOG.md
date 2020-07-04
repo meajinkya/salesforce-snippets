@@ -1,6 +1,11 @@
 ## Changelog
 All notable changes to this project will be documented in this file.
 
+### [1.2.1] - 2020-07-04
+#### Fixed
+- Incorrect snippets for test class and test method
+- Minor issues in apex snippets
+
 ### [1.2.0] - 2020-06-28
 #### Changed
 - Aura related trigger text to have "aura" prefix 
@@ -24,3 +29,4 @@ All notable changes to this project will be documented in this file.
 [1.1.0]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.1.0
 [1.1.1]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.1.1
 [1.2.0]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.2.0
+[1.2.1]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.2.1
