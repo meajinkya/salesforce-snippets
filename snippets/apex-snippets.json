@@ -130,6 +130,14 @@
         "description": "Print debug to log with a variable value"
     },
 
+    "System debug with variable json pretty": {
+        "prefix": "debugvarpretty",
+        "body": [
+            "System.debug('$1' + JSON.serializePretty${2:variable});"
+        ],
+        "description": "Print debug to log with a variable value"
+    },
+
     "Test method" : {
         "prefix": "testmethod",
         "body": [
@@ -148,7 +156,7 @@
     "Assert" : {
         "prefix": "assert",
         "body": [
-            "System.assert(${1:booleanExpression});"
+            "Assert.isTrue(${1:booleanExpression}, '${2:message}');"
         ],
         "description": "Assert for single boolean expression"
     },
@@ -156,7 +164,7 @@
     "Assert Equals" : {
         "prefix": "asserte",
         "body": [
-            "System.assertEquals(${1:expectedValue}, ${2:actualValue});"
+            "Assert.areEqual(${1:expectedValue}, ${2:actualValue}, '${3:message}');"
         ],
         "description": "Assert for comparing two values"
     },
@@ -164,7 +172,7 @@
     "Assert Not Equals" : {
         "prefix": "assertne",
         "body": [
-            "System.assertNotEquals(${1:expectedValue}, ${2:actualValue});"
+            "Assert.areNotEqual(${1:expectedValue}, ${2:actualValue}, '${3:message}');"
         ],
         "description": "Assert for comparing two values negative"
     },

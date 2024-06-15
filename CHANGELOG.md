@@ -1,6 +1,11 @@
 ## Changelog
 All notable changes to this project will be documented in this file.
 
+### [1.3.0] - 2024-06-15
+#### Updated
+- Assert snippets to use new Assert class
+- Assert snippets to include message parameter
+
 ### [1.2.1] - 2020-07-04
 #### Fixed
 - Incorrect snippets for test class and test method
@@ -30,3 +35,4 @@ All notable changes to this project will be documented in this file.
 [1.1.1]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.1.1
 [1.2.0]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.2.0
 [1.2.1]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.2.1
+[1.3.0]: https://github.com/meajinkya/salesforce-snippets/releases/tag/v1.3.0
